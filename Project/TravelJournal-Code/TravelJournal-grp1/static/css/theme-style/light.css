@@ -1,0 +1,54 @@
+body,
+.boss-footer-area p a,
+.boss-home-area,
+.boss-scroll-down a {
+  color: #323232;
+}
+
+.boss-dark-overlay {
+  opacity: 0;
+}
+
+.boss-cta-area,
+.boss-button a,
+.boss-button p,
+.boss-subscribe-area,
+.boss-item .boss-caption h3 {
+  color: #323232;
+}
+
+.boss-button a,
+.boss-scroll-down a {
+  border-color: #323232;
+}
+
+.boss-countdown div span:last-child {
+  border-color: #323232;
+}
+
+.boss-item:hover .boss-caption {
+  background: rgba(255, 255, 255, 0.64);
+}
+
+.boss-form input {
+  border-color: #323232;
+}
+.boss-form input::-webkit-input-placeholder {
+  color: #323232;
+}
+.boss-form input::-moz-input-placeholder {
+  color: #323232;
+}
+.boss-form input:-ms-input-placeholder {
+  color: #323232;
+}
+
+.boss-service-area,
+.boss-about-area,
+.boss-footer-area {
+  background: #fff;
+}
+
+.boss-work-area {
+  background: #f0f0f0;
+}

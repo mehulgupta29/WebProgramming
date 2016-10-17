@@ -1,0 +1,74 @@
+<% if(locals.userSession){
+    console.log("in home.ejs ");
+    res.redirect("/profile");
+}
+%>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body>
+    <div class="container">
+        <main>
+            <h1><%= pageTitle %></h1>
+            <!-- Let's start writing content! --> 
+            <!-- Form 1-->
+             <% if (error) { %>
+                <div class="alert alert-danger" role="alert">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    <span class="sr-only">Error:</span>
+                    <%= error %>
+                </div>
+            <% } %>   
+            <section class="col-md-20">    
+                <div class="col-md-6" style="float:left" >
+                <h2>Login</h2>
+                    <form action="/result/login" method="POST" class="form-horizontal">
+                        <hr />
+                        <div class="form-group">
+                            <label for = "username" class="control-label col-sm-3" >UserName</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="username" class="form-control" id="username"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for = "password" class="control-label col-sm-3" >Password</label>
+                            <div class="col-sm-9">
+                                <input type="Password" name="password" class="form-control" id="password"/>
+                            </div>
+                        </div>                                         
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                </div>
+               
+                <div class="col-md-6" style="float:right" >
+                   <h2>SignUp</h2>
+                         <form action="/result/signup" method="POST" class="form-horizontal">
+                        <hr />
+                        <div class="form-group">
+                            <label for = "uname" class="control-label col-sm-3" >User Name</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="uname" class="form-control" id="uname"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for = "pword" class="control-label col-sm-3" >Password</label>
+                            <div class="col-sm-9">
+                                <input type="Password" name="pword" class="form-control" id="pword"/>
+                            </div>
+                        </div>                                          
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <% include ../partials/scripts %>
+</body>
+
+</html>

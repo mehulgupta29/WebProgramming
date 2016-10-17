@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body>
+<div class="container">
+    <div class="jumbotron">
+        <h1>AJAX Jquery Express</h1>
+        <h2><a id="all-movies-link">All Movies</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a id="best-movies-link">Best Movies</a></h2>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <h3 id="movie-header">MOVIES</h3>
+            <ul id='movies-list' class="list-group">
+            </ul>
+        </div>
+        <div class="col-sm-12 col-md-4">
+        <div id="alert-div">
+        </div>
+        <h3>Add Movies</h3>
+        <form id="new-movie-form">
+            <label>Movie Title <input id="new-movie-title" type="text" required/></label>
+            <label>Movie Rating <input id="new-movie-rating" type="number" min=1 max=5 step="0.1" required /></label>
+            <input type="submit" id="add-new-movie-btn" value="Add new Movie" />
+        </form>    
+        </div>
+    </div>
+    <br/>
+</div>
+    <% include ../partials/scripts %>
+</body>
+
+</html>

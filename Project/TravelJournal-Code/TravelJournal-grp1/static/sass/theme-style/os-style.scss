@@ -1,0 +1,14 @@
+@mixin border-radius($radius : 25px) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+.boss-countdown div span:last-child,
+.boss-scroll-down a,
+.boss-cta-area .boss-button a,
+#scrollUp,
+.boss-subscribe-area .boss-form input {
+	@include border-radius;
+}

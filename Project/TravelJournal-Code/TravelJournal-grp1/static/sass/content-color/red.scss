@@ -1,0 +1,28 @@
+$red-color: #f25454;
+
+.boss-scroll-down a:hover,
+.boss-scroll-down a:focus{
+	background: $red-color;
+	border-color: $red-color;
+}
+.boss-cta-area .boss-button a:hover,
+.boss-cta-area .boss-button a:focus {
+	color: $red-color;
+	border-color: $red-color;
+}
+
+.boss-subscribe-area .boss-form input:focus {
+	border-color: $red-color;
+}
+.boss-subscribe-area .boss-form input[type="submit"]:hover,
+.boss-subscribe-area .boss-form input[type="submit"]:focus{
+	border-color: $red-color;
+	background: $red-color;
+}
+.boss-footer-area p a:hover,
+.boss-footer-area p a:focus,
+.boss-section-heading h2,
+.boss-home-area .boss-header h1,
+.boss-single-service:hover .boss-icon span{
+	color: $red-color;
+}

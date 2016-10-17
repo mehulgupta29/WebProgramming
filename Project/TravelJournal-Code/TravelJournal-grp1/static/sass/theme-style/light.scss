@@ -1,0 +1,61 @@
+$c-color: #323232; // content color 
+
+// it's use for light and dark theme 
+$f-color: #fff;  //first section color 
+$s-color: #f0f0f0; // second section color
+
+body,
+.boss-footer-area p a,
+.boss-home-area,
+.boss-scroll-down a {
+	color: $c-color;
+}
+.boss-dark-overlay {
+	opacity: 0;
+}
+.boss-cta-area,
+.boss-button a,
+.boss-button p,
+.boss-subscribe-area,
+.boss-item .boss-caption h3 {
+	color: $c-color;
+}
+.boss-button a,
+.boss-scroll-down a {
+	border-color: $c-color;
+}
+.boss-countdown{
+	div{
+		span{
+			&:last-child{
+				border-color: $c-color;
+			}
+		}
+	}
+}
+.boss-item:hover .boss-caption {
+  background: rgba(255, 255, 255, 0.64);
+}
+.boss-form{
+	input{
+		border-color: $c-color;
+		&::-webkit-input-placeholder{
+			color: $c-color;
+		}
+		&::-moz-input-placeholder{
+			color: $c-color;
+		}
+		&:-ms-input-placeholder{
+			color: $c-color;
+		}
+	}
+}
+
+.boss-service-area,
+.boss-about-area,
+.boss-footer-area {
+	background: $f-color;
+}
+.boss-work-area {
+	background: $s-color;
+}

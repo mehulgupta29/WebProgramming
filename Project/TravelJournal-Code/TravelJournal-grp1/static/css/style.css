@@ -1,0 +1,83 @@
+.list-group{
+	max-height:120px; 
+	overflow-y: auto; 
+	overflow-x:hidden;
+}
+.list-group.experience{
+	max-height:120px; 
+	overflow-y: auto; 
+	overflow-x:hidden;
+}
+.list-group.members{
+	max-height:150px; 
+	overflow-y: auto; 
+	overflow-x:hidden;
+}
+.list-group.comments{
+	max-height:315px; 
+	overflow-y: auto; 
+	overflow-x:hidden;
+}
+.comments > h1{
+	color: #f25454;
+}
+.boss-single-service{
+	margin-top:0;
+}
+.boss-single-service #red span {
+	color: #f25454;
+}
+
+.comments > .list-group-item{
+	text-align: left;
+	color: #000;
+}
+.boss-subscribe-area {
+    padding: 80px 0 0 0;
+}
+.boss-footer-area {
+	padding: 0 0;
+}
+#new-caption-form input,button{
+    height: 40px;
+    margin-top: 10px;
+}
+#new-caption-form button{
+	border:3px solid black;
+	margin-top:10px;
+}
+#new-comment-form input#comment,button{
+    height: 40px;
+    margin-top: 10px;
+}
+#new-comment-form button{
+	border:3px solid black;
+	margin-top:10px;
+}
+#create-trip-btn {
+	height: 40px;
+    margin-top: 10px;
+    border:3px solid black;
+	margin-bottom:30px;
+	margin-left: -30px;
+}
+select#tripMembers {
+	border:3px solid black;
+}
+h1#blank-null {
+    padding: 0;
+    font-weight: 0;
+    font-size: 0;
+}
+.boss-header-border.blank-null {
+    margin-bottom:30px;
+}
+#landing {
+    padding-top: 30px;
+}
+#photos {
+	padding: 0;
+}
+.fb-g{
+	margin-right:15px;
+}

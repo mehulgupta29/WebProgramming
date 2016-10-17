@@ -1,0 +1,37 @@
+{
+  "name": "boilerplate",
+  "version": "1.0.0",
+  "description": "Repository for Travel Journal project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mehulgupta29/cs546.git"
+  },
+  "author": "Mehul Gupta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mehulgupta29/cs546/issues"
+  },
+  "homepage": "https://github.com/mehulgupta29/cs546#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.1",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "formidable": "^1.0.17",
+    "fs-extra": "^0.26.7",
+    "guid": "0.0.12",
+    "mongodb": "^2.1.18",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.0",
+    "passport-google-oauth2": "^0.1.6",
+    "path": "^0.12.7",
+    "util": "^0.10.3",
+    "xss": "^0.2.12"
+  }
+}

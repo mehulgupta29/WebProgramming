@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<link href="/assets/css/styles_profile.css" rel="stylesheet">
+        <% include ../partials/head %>
+        <% include ../partials/headings %>
+		<script>
+			$(document).ready(function(){
+			$('[data-toggle="tooltip"]').tooltip();   
+			});	
+		</script>
+    </head>
+<body>
+    <!-- START Nav Bar -->
+        <% include ../partials/header %>
+    <!-- END Nav Bar -->
+    
+    <!-- START MAIN -->
+    <body class="boss-single-service wow fadeInUp animated" data-wow-delay="0.5s" id = "bodyAnimation">
+	<section class="boss-subscribe-area" id="login-signup">
+    <main>
+    <!-- Let's start writing content! -->
+        <div class="container">
+                 
+		<!-- START Create Trip -->
+			<!-- container --><br><br><br><br>
+				<div class="row">
+					<div class="col-sm-12 text-center">
+						<div class="boss-section-heading wow fadeInUp" data-wow-delay="0.5s">
+							<h2 style="color: #f25454">Edit Profile</h3>
+							<div class="boss-header-border">
+							</div>
+						</div>
+					</div>
+				</div><br><br>
+				<div class="row boss-section-heading wow fadeInUp" id = "profileBox">
+					<!-- Edit Profile Form -->
+					
+					<div class="col-sm-4 text-center" id="profilediv"><h3>Upload Photo</h3>
+						<img src="/assets/images/defaultprofile.png" alt="Profile Picture"> <br/><br/>
+					</div>
+					<div class="col-sm-6">
+						<form class="boss-form wow fadeInRightBig" id="profile" method="POST" action="/profile">
+						
+							<div class="form-group wow">
+								<label class="control-label col-sm-4 col-sm-offset-3"><h3><%= user.profile.firstName %></h3></label>
+								<label class="control-label col-sm-4 col-sm-offset-1"><h3><%= user.profile.lastName %></h3></label>
+							</div>
+							
+							<div class="form-group wow fadeInRight">
+								<label class="control-label col-sm-4 col-sm-offset-4"><%= user.profile.emailId %></label>
+							</div>
+							
+							<div class="form-group wow fadeInRight">
+									<div class="col-sm-6">
+										<input type="text" class="form-control" id="fname" placeholder="First Name" name="fname">
+									</div>
+							</div>
+							<div class="form-group wow fadeInRight">
+									<div class="col-sm-6">
+										<input type="text" class="form-control" id="lname" placeholder="Last Name" name="lname">
+									</div>
+							</div>
+							
+							<div class="form-groupwow fadeInRight">
+								<div class="col-sm-6">
+									<input type="password" class="form-control" id="passwd" placeholder="Password" name="passwd" data-toggle="tooltip" data-placement="right" title="Password should be 8 to 15 characters and contain at least one numeric digit and a special character">
+								</div>
+							</div>
+							<div class="form-groupwow fadeInRight">
+								<div class="col-sm-6">
+									<input type="password" class="form-control" id="confpwd" placeholder="Confirm Password" name="confpwd">
+								</div>
+							</div>
+							<div class="form-groupwow fadeInRight">
+								<div class="col-sm-6">
+									<input type="submit" class="form-control" value = "Save Changes" id="save" placeholder="Confirm Password" name="confpwd">
+								</div>
+							</div>
+							<div class="form-group wow fadeInRight">
+								<div class="col-sm-6">
+									<a href = "/landing"><input type="button" class="form-control" value = "Cancel" id="confpwd" name="confpwd"></a>
+								</div>
+							</div>
+							<br/>
+						</form>
+						<div class="col-sm-12">
+							<div class="alert alert-danger hidden text-center" id="errormessageprofile"></div>
+						</div>
+						<br><br><br><br><br><br>
+					</div>
+			   
+				</div>
+			</div>
+			<!--/ container -->
+		<!--/ END service area -->
+        </div>
+    </main></div></div><br><br>
+    <!-- END Main -->
+
+    <!-- START footer area -->
+    <% include ../partials/footer %>
+    <!-- END footer area -->
+
+    <!-- SCRIPTS -->
+        <% include ../partials/scripting %>
+        <% include ../partials/scripts %>
+
+	<script src = "/assets/js/profile_validation.js"></script>
+    <script type="text/javascript">
+    // wow js active here
+        new WOW().init({
+            offset:       200   // distance to the element when triggering the animation (default is 0)
+        });
+    </script>
+
+    <!-- SCRIPTS -->
+</body>
+</html>

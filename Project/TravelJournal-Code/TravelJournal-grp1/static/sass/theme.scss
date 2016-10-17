@@ -1,0 +1,338 @@
+/*this file is containing all of your theme style and modification*/
+
+/* Table of content 
+1. PRELOADER ================================================ # LINE 16
+2. MISC AND RE-USABLE ELEMENT =============================== # LINE 174
+3. HOME SECTION ============================================= # LINE 204
+4. SERVICE  SECTION ========================================= # LINE 271
+5. CTA SECTION ============================================== # LINE 286
+6. ABOUT US SECTION ========================================= # LINE 314
+7. WORKS SECTION ============================================ # LINE 329
+8. SUBSCRIBE SECTION ======================================== # LINE 375
+9. FOOTER SECTION =========================================== # LINE 406
+
+*/
+
+/* ============= PRELOADER STYLE ============ */
+#boss-preloader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #eaeaea;
+  /* change if the mask should have another color then white */
+  z-index: 99;
+  /* makes sure it stays on top */
+}
+
+.boss-pre-vcenter {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.boss-pre-vcenter h4 {
+  color: #323232;
+}
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #333;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+/* ============== Misc and re-usable element ============== */
+section{
+	padding: 80px 0;
+}
+.boss-section-heading{
+	h2{
+		color: #e74c3c;
+		font-size: 40px;
+		font-weight: 700;
+	}
+	p{
+		line-height: 30px;
+	}
+}
+
+.boss-header-border{
+	background: url(../images/header-border.png) no-repeat;
+	height: 13px;
+	width: 78px;
+	display: inline-block;
+}
+.boss-dark-overlay {
+	background: rgba(34, 34, 34, 0.6);
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+/* ============== Home style ============== */
+.boss-home-area{
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	padding: 0;
+	.boss-header h1{
+		padding: 0;
+	}
+	.boss-logo img {
+		width: 230px;
+		height: 230px;
+		margin: auto;
+	}
+}
+.boss-overlay {
+	background: url(../images/overlay.png) repeat;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.boss-home-area > .container{
+	height: 100%;
+	position: relative;
+}
+.boss-wrapper{
+	width: 100%;
+	height: auto;
+	position: relative;
+	top: 50%;
+}
+.boss-countdown{
+	div{
+		display: inline-block;
+		span{
+			display: block;
+			width: 240px;
+			&:first-child{
+				font-size: 50px;
+				font-weight: 300;
+				font-weight: 700;
+			}
+			&:last-child{
+				font-size: 30px;
+				line-height: 20px;
+				border: 3px solid;
+				padding: 15px 10px;
+				margin: 20px auto 0px;
+				width: 170px;
+				text-transform: uppercase;
+				font-weight: 300;
+			}
+		}
+	}
+}
+.boss-scroll-down{
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	margin-left: -20px;
+	width: 40px;
+	display: inline-block;
+	height: 40px;
+	text-align: center;
+	a{
+		width: 40px;
+		height: 40px;
+		display: block;
+		border: 1px solid;
+		line-height: 40px;
+		&:hover,
+		&:focus{
+			color: #fff;
+		}
+	}
+}
+
+/* ============= SERVICE STYLE ============ */
+.boss-single-service{
+	margin-top: 50px;
+	.boss-icon{
+		span {
+			font-size: 70px;
+			-webkit-transition: all 0.3s ease-in-out 0s;
+			-o-transition: all 0.3s ease-in-out 0s;
+			transition: all 0.3s ease-in-out 0s;
+		}
+	}
+	p {
+		margin-top: 30px;
+	}
+}
+/* ============= cta style ============= */
+#boss-cta{
+	background: url(http://i.imgur.com/pKjSgQ1.jpg) no-repeat center 70%;
+	-webkit-background-size: cover;
+	background-size: cover;
+	padding: 50px 0;
+	position: relative;
+	.boss-header{
+		margin: 20px 0;
+	}
+	.boss-button{
+		margin-top: 10px;
+		a{
+			font-size: 30px;
+			width: 200px;
+			height: 60px;
+			background-color: transparent;
+			font-weight: 700;
+			border: 3px solid;
+		}
+		p{
+			font-size: 20px;
+			font-weight: 600;
+		}
+	}
+}
+
+
+/* =============== about style ============== */
+.boss-about-area{
+	.boss-company-work{
+		margin-top: 50px;
+	}
+	.boss-big-logo{
+		margin-top: 100px;
+	}
+}
+.boss-company-history{
+	margin-top: 50px;
+}
+.boss-company-history h3 {
+	font-weight: 700;
+}
+/* =============== work style ============== */
+.boss-work-area{
+	padding: 60px 0;
+	.boss-owl {
+		overflow: hidden;
+	}
+	.owl-item:hover {
+		cursor: pointer;
+	}
+}
+.boss-item {
+	overflow: hidden;
+	position: relative;
+	&:hover{
+		img {
+			transform: scale(1.2);
+		}
+		.boss-caption {
+			h3 {
+				top: 50%;
+				margin-top: -26px;
+				opacity: 1;
+			}
+		}
+	}
+	img {
+		width: 100%;
+		transition: all 0.4s ease-in-out;
+	}
+	.boss-caption {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		transition: all 0.25s ease-in-out 0s;
+		text-align: center;
+		h3 {
+			font-weight: 700;
+			position: absolute;
+			top: 90%;
+			opacity: 0;
+			transition: all 0.4s ease-in-out 0s;
+		}
+	}
+}
+/* =============== subscibe style ============= */
+.boss-subscribe-area{
+	padding: 80px 0;
+	background: url(http://i.imgur.com/dowKewW.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	position: relative;
+}
+.boss-form{
+	margin-top: 20px;
+	input{
+		height: 50px;
+		padding: 0 20px;
+		margin-top: 20px;
+		border: 3px solid;
+		outline: none;
+		background-color: transparent;
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+		font-weight: 700;
+		&:focus{
+			border-color: #ff00ff;
+		}
+	}
+	input[type="submit"]:hover{
+		border-color: #ff00ff;
+		background: #ff00ff;
+		color: #fff;
+	}
+}
+/* ============ footer style ============== */
+.boss-footer-area{
+	padding: 50px 0;
+	img{
+		margin-bottom: 30px;
+		width: 143px;
+		height: 143px;
+	}
+	p{
+		line-height: 30px;
+		padding: 0;
+		a{
+			font-weight: 700;
+		}
+	}
+}
+
+

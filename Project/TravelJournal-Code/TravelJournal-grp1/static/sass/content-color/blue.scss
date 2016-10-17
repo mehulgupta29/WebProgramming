@@ -1,0 +1,28 @@
+$blue-color: #008ed6;
+
+.boss-scroll-down a:hover,
+.boss-scroll-down a:focus{
+	background: $blue-color;
+	border-color: $blue-color;
+}
+.boss-cta-area .boss-button a:hover,
+.boss-cta-area .boss-button a:focus {
+	color: $blue-color;
+	border-color: $blue-color;
+}
+
+.boss-subscribe-area .boss-form input:focus {
+	border-color: $blue-color;
+}
+.boss-subscribe-area .boss-form input[type="submit"]:hover,
+.boss-subscribe-area .boss-form input[type="submit"]:focus{
+	border-color: $blue-color;
+	background: $blue-color;
+}
+.boss-footer-area p a:hover,
+.boss-footer-area p a:focus,
+.boss-section-heading h2,
+.boss-home-area .boss-header h1,
+.boss-single-service:hover .boss-icon span{
+	color: $blue-color;
+}

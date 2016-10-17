@@ -1,0 +1,21 @@
+
+
+#profileBox{
+	padding:10px;
+	box-shadow:1px 1px 1px 1px #E74C3C;
+	border-radius:5px;
+}
+
+#profilediv{
+	border-right: 1px dashed #E74C3C;
+	margin-top:25px;
+	padding: 10px;
+}
+
+.tooltip-inner{
+	 width: 350px; 
+	background-color:#e74c3c;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+

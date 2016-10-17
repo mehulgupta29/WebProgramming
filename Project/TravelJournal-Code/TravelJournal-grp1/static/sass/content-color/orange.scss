@@ -1,0 +1,28 @@
+$orange-color: #ea8825;
+
+.boss-scroll-down a:hover,
+.boss-scroll-down a:focus{
+	background: $orange-color;
+	border-color: $orange-color;
+}
+.boss-cta-area .boss-button a:hover,
+.boss-cta-area .boss-button a:focus {
+	color: $orange-color;
+	border-color: $orange-color;
+}
+
+.boss-subscribe-area .boss-form input:focus {
+	border-color: $orange-color;
+}
+.boss-subscribe-area .boss-form input[type="submit"]:hover,
+.boss-subscribe-area .boss-form input[type="submit"]:focus{
+	border-color: $orange-color;
+	background: $orange-color;
+}
+.boss-footer-area p a:hover,
+.boss-footer-area p a:focus,
+.boss-section-heading h2,
+.boss-home-area .boss-header h1,
+.boss-single-service:hover .boss-icon span{
+	color: $orange-color;
+}

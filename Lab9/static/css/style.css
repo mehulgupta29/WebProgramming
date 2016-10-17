@@ -1,0 +1,133 @@
+/* Styles I have provided: */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14pt;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+.content {
+    margin: auto;
+	padding: 0 25pt;
+}
+
+body { 
+	color: #333;
+	font-size: 1.5rem;
+}
+
+main h1, main h2, main h3, main h4, main h5, main h6 {
+	text-align: center;
+}
+
+section.chapter {
+	border-top: 1px solid #999;
+	padding: 20pt 0;
+    background: #FFF;
+}
+
+a { 
+	color: #44609D;
+}
+
+ nav ul {
+ 	padding: 0;
+ 	list-style: none;
+ }
+
+ nav li { 
+    width: 300px;
+ }
+ 
+ /* Solution */
+ 
+ p.caps::first-letter {
+    font-size: 3rem;
+ 	font-family: cursive;
+ 	font-style: normal;
+ 	
+ }
+
+::selection{
+	color: #FFF;
+	background: #44609D;
+
+}
+
+p.caps::first-line { 
+    font-size: 2.625rem;
+}
+
+
+::-moz-selection{
+	color: #FFF;
+	background: #44609D;
+
+}
+
+
+@media only screen and (min-width: 750px) {
+    a.hover_link:hover {
+ 	font-size: 150%;
+ 	transition-property: font-size;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+
+ }
+
+ nav li { 
+    width: 300px;
+ }
+html {
+    font-size: 18pt;
+}
+
+.content {
+	width: 80%;
+    padding: 0;
+    margin: auto;
+}
+.chapter{
+	opacity: 0.75;
+	transition-property: opacity;
+    transition-delay: .5s;
+    transition-timing-function: linear;
+}
+.chapter:hover{
+	opacity: 1;
+}
+.chapter.active {
+	opacity: 1;
+}
+.chapter:focus { 
+    opacity: 1;
+}
+}
+
+

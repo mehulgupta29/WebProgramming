@@ -1,0 +1,32 @@
+/*your extra important css code here*/
+
+/* ===================== subscribe area ==================== */
+.boss-subscribe-message , .boss-subscribe-message > p {
+	font-weight: 700;
+	padding: 0px !important;
+	margin: 0px !important;
+	line-height: 0 !important;
+	color: #000 ;
+	display: block;
+	
+}
+.valid > p{
+	color: #000;
+}
+
+/* ============= scroll up style ============== */
+#scrollUp{
+	background: #454545;
+	height: 30px;
+	width: 30px;
+	right: 20px;
+	bottom: 20px;
+	font-family: 'Glyphicons Halflings';
+	&:before{
+		content: '\e113';
+		left: 25%;
+		position: absolute;
+		top: 15%;
+		color: #fff;
+	}
+}

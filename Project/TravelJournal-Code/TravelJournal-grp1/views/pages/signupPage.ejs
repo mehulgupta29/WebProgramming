@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+    <% include ../partials/headings %>
+	<link href="/assets/css/styles_signup.css" rel="stylesheet" property="stylesheet">
+	
+</head>
+<body>
+<div class="boss-single-service wow fadeInUp animated" data-wow-delay="0.5s" id = "bodyAnimation">
+	<section class="boss-subscribe-area" id="login-signup">
+		<div id="header">
+			<div class ="row">
+				<div class= "col-sm-10 col-md-12 col-lg-12 text-center">
+					<h1><strong>TRAVEL JOURNAL</strong></h1>
+				</div>
+			</div>
+		</div>
+	
+		<div class="boss-dark-overlay"></div>
+		<!-- container -->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-8 col-lg-6 col-sm-offset-3">
+					<div class="text-center">
+						<h2><strong>Sign Up</strong></h2>
+						<h3>It’s free and always will be.</h3><br />
+					</div>
+					<% if(errorFlag == 1){ %>
+					<div class="form-group">
+						<div class="col-sm-5 col-sm-offset-4">
+							<div class="alert alert-danger text-center" id="error-message-signup"><%= errorMessage %></div>
+						</div>
+					</div>
+				<% } %>
+					<form class="boss-form wow fadeInRightBig" name="signup" id="signup" method="POST" action="/signup">
+						<div class="col-md-6 col-sm-12 col-lg-6">
+							<div class="form-group">
+							<label for="email" class="col-sm-2 control-label sr-only">Email</label>
+								<div class="col-sm-12">
+									<input type="text" class="form-control" id="email" placeholder="Email" name="email">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="fname" class="col-sm-2 control-label sr-only">First Name</label>
+								<div class="col-sm-12">
+									<input type="text" class="form-control" id="fname" placeholder="First Name" name="fname">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="lname" class="col-sm-2 control-label sr-only">Last Name</label>
+								<div class="col-sm-12">
+									<input type="text" class="form-control" id="lname" placeholder="Last Name" name="lname">
+								</div>
+							</div>                                
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="passwd" class="col-sm-2 control-label sr-only">Password</label>
+								<div class="col-sm-12">
+									<input type="password" class="form-control" id="passwd" placeholder="Password" name="passwd" data-toggle="tooltip" data-placement="right" title="Password should be 8 to 15 characters and contain at least one numeric digit and a special character">
+								</div>
+							</div>							
+							<div class="form-group">
+								<label for="confpwd" class="col-sm-2 control-label sr-only">Confirm Password</label>
+								<div class="col-sm-12">
+									<input type="password" class="form-control" id="confpwd" placeholder="Confirm Password" name="confpwd">
+								</div>
+							</div>							
+						</div>
+						<div class="form-group col-sm-12"><br/>
+							<div class="col-sm-12 col-lg-offset-2">
+								By creating an account, you agree to Travel <br />Journal's<a href=""> Conditions of Use</a>
+								and<a href=""> Privacy Notice.</a>
+							</div>	
+						</div>
+						<div class="form-group">
+							<div class="col-sm-12 col-md-12">
+								<div class="alert alert-info hidden text-center" id="error-message-signup"></div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-12">
+								<input type="submit" class="col-sm-6 col-sm-offset-3 col-xs-offset-3 col-xs-6" id="join" value = "sign up">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-12 col-sm-offset-3">
+								<br/><strong>Returning User?</strong><a href="/login"><strong> &nbsp;Login Here</strong></a>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+            <!--/ container -->
+        </section>
+	<br/><br/>
+	<script src="/assets/js/signup_validation.js"></script>
+	<% include ../partials/footer %>
+
+	<script>
+			$(document).ready(function(){
+			$('[data-toggle="tooltip"]').tooltip();   
+			});	
+		</script>
+	<% include ../partials/scripts %>
+	</div>
+</body>
+</html>
+

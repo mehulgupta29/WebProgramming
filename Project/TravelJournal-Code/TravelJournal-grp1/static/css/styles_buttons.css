@@ -1,0 +1,17 @@
+.btnTrans{
+	background-color:transparent;
+  border:2px solid;
+  border-radius:40px;
+  font-weight:700;
+  height:40px;
+  margin-top:20px;
+  outline:none;
+  padding:0 20px;
+  transition:all 0.3s ease-in-out;
+}
+.btnTrans:hover{
+	background-color:#E74C3C;
+	border:3px solid #E74C3C;
+	color:#ffffff;
+}
+

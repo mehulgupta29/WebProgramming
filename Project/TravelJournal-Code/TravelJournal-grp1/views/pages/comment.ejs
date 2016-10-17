@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+    <% include ../partials/headings %>
+</head>
+
+<body>
+
+    <!-- START Nav Bar -->
+    <% include ../partials/header %>
+    <!-- END Nav Bar -->
+    <main>
+        <div class="container">
+            <div class="boss-subscribe-area" > 
+                <!-- START service area -->
+                <section class="boss-service-area trip" id="photos">
+                    <% if(trip){
+                    trip.photos.forEach(function(image){
+                        if(image._id == locals.photoId){ %>
+                    <!-- container -->
+                    <div class="container">
+                        <div class="row">
+                            <!-- Image -->
+                                <div class="col-md-8">
+                                    <div class="row">
+                                        <img src="/<%= image.imgPath %>" alt="<%= image._id %>" width="665" height="500"/>
+                                    </div>
+                                    <div class="row">
+                                        <!-- Start Caption -->
+                                        <div class="row">
+                                            <form id="new-caption-form" class="boss-form">
+                                                <div class="col-md-8">
+                                                    <label for="caption" class="sr-only">Caption</label>
+                                                    <input type="text" class="form-control" name="caption" id="caption" placeholder="<%= image.caption %>" />
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <input type="hidden" name="photoId" id="photoId" value="<%= image._id%>"/>
+                                                    <button type="submit" class="btn btn-default">update caption</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!-- End Caption -->
+                                    </div>
+                                </div>
+                            <!-- Image -->
+                            <div class="col-sm-12 col-md-4 text-center">
+                                <div class="row">
+                                    <div class="boss-single-service wow fadeInUp comments" data-wow-delay="0.5s">
+                                        <div class="boss-icon" id="red">
+                                            <span class="icon-notebook"></span>
+                                        </div>
+                                        <h1>Comments</h1>
+                                    </div>
+                                </div>
+                                <div id="error-message-comments">
+                                </div>
+                                <div class="row">
+                                    <form id="new-comment-form" class="boss-form">
+                                        <div class="col-md-8">
+                                            <label for="comment" class="sr-only">Comment</label>
+                                            <input type="text" class="form-control" name="comment" id="comment" placeholder="Comment" />
+                                        </div>
+                                        <div class="col-md-4">
+                                            <input type="hidden" name="photoId" id="photoId" value="<%= image._id%>"/>
+                                            <button type="submit" class="btn btn-default">comment</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- All Comments -->
+                                    <div class="row">
+                                        <ul id="comment-list" class="list-group comments">
+                                            <% trip.comments.forEach(function(comment){
+                                                if(comment.photoId == locals.photoId){ %>
+                                                    <li class="list-group-item">
+                                                        <span><strong><%= comment.poster.firstName %></strong><i> says:</i> <%= comment.comment %></span>
+                                                    </li>
+                                                <% }
+                                            }) %>
+                                        </ul>
+                                    </div>
+                                <!-- All Comments -->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <p><%= error %></p>
+                            </div>
+                        </div>
+                    </div>
+                    <% }
+                    })
+                }%>
+                </section>
+            </div>
+        </div>
+    </main>
+
+
+    <% include ../partials/master-footer %>
+
+
+</body>
+</html>

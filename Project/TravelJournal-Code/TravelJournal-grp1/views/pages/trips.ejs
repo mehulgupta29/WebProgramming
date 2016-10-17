@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include ../partials/head %>
+        <% include ../partials/headings %>
+    </head>
+<body>
+    <!-- START Nav Bar -->
+        <% include ../partials/header %>
+    <!-- END Nav Bar -->
+    
+    <!-- START MAIN -->
+    <main>
+    <!-- Let's start writing content! -->
+        <div class="container">
+            <div class="boss-subscribe-area" >
+                 
+                <!-- START Create Trip -->
+                <section class="boss-service-area trip" id="service">
+                    <!-- container -->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <div class="boss-section-heading wow zoomIn" data-wow-delay="0.5">
+                                    <h2><%= pageTitle %></h2>
+                                    <div class="boss-header-border blank-null"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 text-center">
+                                <div class="boss-single-service wow fadeInUp" data-wow-delay="0.5s">
+                                    <div class="boss-icon">
+                                        <span class="icon-notebook" style="color: #f25454"></span>
+                                    </div>
+                                    <h3 style="color: #f25454">Create Trip</h3>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 text-center">
+                                <div class="boss-single-service wow fadeInUp" data-wow-delay="0.7s">
+                                    <div class="boss-icon">
+                                        <span class="icon-pictures"></span>
+                                    </div>
+                                    <h3>Upload Photos</h3>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 text-center">
+                                <div class="boss-single-service wow fadeInUp" data-wow-delay="1s">
+                                    <div class="boss-icon">
+                                        <span class="icon-gift2"></span>
+                                    </div>
+                                    <h3>Enjoy!</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- Create Trip Form -->
+                             <% if (error) { %>
+                                <div class="alert alert-danger" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                    <span class="sr-only">Error</span>
+                                        <%= error %>
+                                </div>
+                            <% } %>
+                            <div id="error-message-create-trip">
+                            </div>
+                            <div class="col-md-4 col-md-offset-4">
+                                <form class="boss-form wow fadeInRightBig " action="/createTrip" method="POST">
+                                    <div class="col-sm-12 col-md-12 text-center">
+                                        <h4>Let's get started</h4>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12">
+                                        <label for="tripName" class="col-sm-2 control-label sr-only">Give your trip a name.</label>
+                                        <input type="text" class="form-control" name="tripName" id="tripName" placeholder="Give your trip a name.." required />
+                                    </div>
+                                    <div class="col-sm-12 col-md-12">
+                                        <label for="tripLocation" class="col-sm-2 control-label sr-only">Where are you travelling</label>
+                                        <input type="text" class="form-control" name="tripLocation" id="tripLocation" placeholder="Where are you traveling?" required/>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12">
+                                        <label for="tripDate" class="col-sm-2 control-label sr-only">When are you travelling</label>
+                                        <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-control" name="tripDate" id="tripDate" placeholder="When are you traveling?" required/>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12">
+                                    <br>
+                                        <label for="tripMembers" class="col-sm-12 control-label">Add Members</label>
+                                        <select id="tripMembers" multiple size="5" class="form-control" name="tripMembers" required>
+                                            <% if(users){
+                                            users.forEach(function(user){ %>
+                                            <option value="<%= user.profile.emailId %>"><strong><%= user.profile.firstName %>&nbsp;<%= user.profile.lastName %></strong>: &nbsp;<%= user.profile.emailId %></option>
+                                            <% }) }%>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 text-center">
+                                    <br/>
+                                        <button type="submit" id="create-trip-btn" class="btn btn-default">SUBMIT</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/ container -->
+                </section>
+                <!--/ END service area -->
+            </div>
+        </div>
+    </main>
+    <!-- END Main -->
+
+    <% include ../partials/master-footer %>
+    
+</body>
+</html>

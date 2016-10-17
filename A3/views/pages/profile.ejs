@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<% if(locals.userSession){
+%>
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+        </header>
+        <main>
+            <h1><%= pageTitle %></h1>
+           
+            <!-- Let's start writing content! --> 
+            <!-- Form 1-->
+            <section class="col-md-20">
+                <% if (error) { %>
+                    <div class="alert alert-danger" role="alert">
+                        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                        <span class="sr-only">Error:</span>
+                        <%= error %>
+                    </div>
+                <% } else{ %>   
+                    <% if(user.profile.firstName){ %>
+
+             <div class="col-md-6" style="float:left" >
+                    <ul>
+                        <li>First Name : <%= user.profile.firstName %></li>
+                        <li>Last Name : <%= user.profile.lastName %></li>
+                        <li>Hooby : <%= user.profile.hobby %></li>
+                        <li>Pet Name : <%= user.profile.petName %></li>
+                    </ul>
+                </div>
+                    <% } 
+                }%>
+     
+                <div class="col-md-6" style="float:right" >
+                    <form action="/logout" method="POST" class="form-horizontal">
+                        <button type="submit" class="btn btn-default btn-sm">
+                            Log out
+                        </button>  
+                    </form>
+                </div> 
+            </section>
+            <section class="col-md-12">
+                <h2>Profile</h2>
+                 <div class="col-md-6" style="float:left" >
+
+                    <form action="/result/profile" method="POST" class="form-horizontal">
+                        <hr />
+                        <div class="form-group">
+                            <label for="fname" class="control-label col-sm-3" >First Name</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="fname" class="form-control" id="fname"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lname" class="control-label col-sm-3" >Last Name</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="lname" class="form-control" id="lname"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="hobby" class="control-label col-sm-3" >Hobby</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="hobby" class="form-control" id="hobby"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="pname" class="control-label col-sm-3" >Pet Name</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="pname" class="form-control" id="pname"/>
+                            </div>
+                        </div>                                         
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+ 
+                </div>
+            </section>
+        </main>
+    </div>
+
+
+    <% include ../partials/scripts %>
+</body>
+
+</html>
+
+<% }else{
+    response.redirect("pages/home");
+} %>

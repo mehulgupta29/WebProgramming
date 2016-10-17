@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+    <% include ../partials/headings %>
+	<link href="/assets/css/styles_buttons.css" rel="stylesheet" property="stylesheet">
+</head>
+<body>
+<div class="boss-single-service wow fadeInUp animated" data-wow-delay="0.5s" id = "bodyAnimation">
+	<div class="boss-subscribe-area" id="login-signup">
+		<% if(errorFlag == 1){ %>
+		<div class="form-group">
+			<div class="col-sm-4 col-sm-offset-4">
+				<div class="alert alert-danger text-center" id="error-message-username"> <%= errorMessage %> </div>
+			</div>
+		</div>
+		<% } %>
+		<div id="header">
+		<div class ="row">
+			<div class= "col-sm-12 col-md-12 col-lg-12 text-center">
+				<h1><strong>TRAVEL JOURNAL</strong></h1>
+			</div>
+		</div>
+    </div>
+		
+	<div class ="row text-center">
+		<div id="loginDiv"><strong>Login with one of your previously connected accounts:</strong><br>
+			<br/>
+			<a href = "/auth/facebook"><img src = "/assets/images/facebook.png" height = "55" width = "55" alt = "Login With Facebook" style = "margin-right:15;"></a>
+			<a href = "/auth/google"><img src = "/assets/images/gmail.jpg" height = "50" width = "50" alt = "Login With Facebook" style = "margin-right:15;"></a>
+		</div>			
+	</div>
+
+		<form class="boss-form wow fadeInRightBig col-sm-offset-4" id="login" action="/login" method="POST">
+			<div class = "col-sm-12">
+				<div class="form-group wow fadeInRight">
+					<label for="email" class="col-sm-2 control-label sr-only">Email</label>
+					<div class="col-sm-12 col-md-6 col-lg-5">
+						<input type="text" class="form-control" id="email" placeholder="Email" name="email">
+					</div>
+				</div>
+			</div>
+			<div class = "col-sm-12">
+				<div class="form-group wow fadeInRight">
+					<label for="pwd" class="col-sm-2 control-label sr-only">Password</label>
+					<div class="col-sm-12 col-md-6 col-lg-5">
+						<input type="password" class="form-control" id="pwd" placeholder="Password" name="pwd">
+					</div>
+				</div>	
+			</div>
+			<div class = "col-sm-12">
+				<div class="form-group wow fadeInRight">
+					<div class="col-sm-12 col-md-6 col-lg-5 text-center">
+					<br/><button type="submit" class="btnTrans" id="btnlogin"><strong>LOG IN</strong></button>
+					</div>
+				</div>
+			</div>
+			<div class = "col-sm-12">
+				<div class="form-group wow fadeInRight">
+					<div class="col-sm-5">
+						<br/><div class="alert alert-info text-center hidden" id="error-message-login"></div>
+					</div>
+				</div>
+			</div>
+			<div class = "col-lg-offset-1"><strong>Don't have an account? &nbsp;</strong>
+				<a href="/signup"><strong>Register Here</strong></a>
+			</div><br />
+		</form>
+	</div>
+	</div>
+<br />
+	<% include ../partials/footer %>
+	<script src="/assets/js/login_validation.js"></script>
+	<% include ../partials/scripts %>
+</body>
+</html>

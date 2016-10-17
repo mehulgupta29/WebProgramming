@@ -1,0 +1,72 @@
+/*
+CS546 - Mehul Gupta
+Lab 6
+*/
+
+/* Styles I have provided: */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18pt;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+main {
+    width: 60%;
+}
+
+/* Styles you create */
+nav ul{
+	list-style: none;
+	padding: 0pt;
+}
+.content{
+	padding-left: 50pt;
+	padding-right: 50pt;
+}
+main h2{
+	text-align: center;
+}
+section.chapter{
+	border-top: thick solid #ffcc00;
+	padding-top: 20pt;
+	padding-bottom: 20pt;
+}
+body{
+	color: #333;
+	font-size: 15pt;
+}
+a{
+	color: #44609D;
+}
+#scroll-to-top{
+	position: fixed;
+	bottom: 10%;
+	right: 10%;
+}
