@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Mehul Gupta Assignment 2</title>
+
+    <!-- Bootstrap -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>CS-546 Assignment 2</h1>
+                <h2>Mehul Gupta</h2>
+            </div>
+        </div>
+        <main>
+            <!-- Your main content will go here! -->
+            <h2>My To Do List</h2>
+            <p> The following are the routes used in this assignment.</p>
+            <section>
+                    <h5>Routes Details</h5>
+                    <table class = "table">
+                        <tr>
+                            <th>Method</th>
+                            <th>Route</th>
+                            <th>Description</th>
+                        </tr>
+                        
+                        <tr>
+                            <td>GET</td>
+                            <td>/</td>
+                            <td>Displays the index page.</td>
+                        </tr>
+                        <tr>
+                            <td>GET</td>
+                            <td>/api/todo</td>
+                            <td>Responds with an array listing of every ToDoEntry</td>
+                        </tr>
+                        <tr>
+                            <td>GET</td>
+                            <td>/api/todo/open</td>
+                            <td>Responds with an array listing of every ToDoEntry with status of 'open'</td>
+                        </tr>
+                        <tr>
+                            <td>GET</td>
+                            <td>/api/todo/completed</td>
+                            <td>Responds with an array listing of every ToDoEntry with status of 'completed'</td>
+                        </tr>
+                        <tr>
+                            <td>GET</td>
+                            <td>/api/todo/:id</td>
+                            <td>Responds with a single ToDoEntry of particular 'id'</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>POST</td>
+                            <td>/api/todo</td>
+                            <td>Create and store a new ToDoEntry; if successful, it will respond with the new ToDoEntry in the response.
+                                <br>Request only accepts 'author', 'taskTitle' and 'taskDescription'
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>POST</td>
+                            <td>/api/todo/:id/notes</td>
+                            <td>Adds a note to the ToDoEntry with ':id' and responds with the updated entry.
+                                <br>Request should be provided as: {note: "The note text"}
+                            </td>
+                        </tr>
+                        
+                         <tr>
+                            <td>PUT</td>
+                            <td>/api/todo/:id</td>
+                            <td>Updates the ToDoEntry with ':id' and responds with the updated entry.
+                                <br>Request only accepts 'taskTitle', 'taskDescription' and 'status'
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>DELETE</td>
+                            <td>/api/todo/:id</td>
+                            <td>Removes the ToDoEntry with ':id' and responds with the success/error response</td>
+                        </tr>
+                    </table>
+                </section>
+        </main>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- jQuery fallback -->
+    <script>
+        if (!window.jQuery) { document.write('<script src="/assets/js/jquery.js"><\/script>'); }
+    </script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/assets/js/bootstrap.min.js"></script>
+</body>
+
+</html>
